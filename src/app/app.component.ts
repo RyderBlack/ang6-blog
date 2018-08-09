@@ -35,13 +35,13 @@ export class AppComponent {
     {
       title: 'Veggie 3',
       content: 'Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock yarrow chickpea dandelion sorrel courgette turnip greens tigernut soybean radish artichoke wattle seed endive groundnut broccoli arugula.',
-      loveIts: 32,
+      loveIts: -32,
       created_at: 'nov'
     },
     {
       title: 'Veggie 4',
       content: 'Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jícama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea.',
-      loveIts: -21,
+      loveIts: 21,
       created_at: 'nov'
     }
   ];
