@@ -23,7 +23,7 @@ export class AppComponent {
     {
       title: 'Veggie 1',
       content: 'Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.',
-      loveIts: 54,
+      loveIts: 0,
       created_at: 'nov'
     },
     {
@@ -35,7 +35,7 @@ export class AppComponent {
     {
       title: 'Veggie 3',
       content: 'Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock yarrow chickpea dandelion sorrel courgette turnip greens tigernut soybean radish artichoke wattle seed endive groundnut broccoli arugula.',
-      loveIts: -32,
+      loveIts: -2,
       created_at: 'nov'
     },
     {
