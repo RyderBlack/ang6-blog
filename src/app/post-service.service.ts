@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { Subject } from 'rxjs';
 
 @Injectable({
@@ -7,7 +7,8 @@ import { Subject } from 'rxjs';
 
 export class PostServiceService {
 
-
+  
+  @Input() loveIts: number;
   postsSubject = new Subject<any[]>();
 
   private posts = [
@@ -39,6 +40,24 @@ export class PostServiceService {
 
   emitAppareilSubject() {
     this.postsSubject.next(this.posts.slice());
+  }
+
+  addLoveIts() {
+    this.loveIts++;
+    this.emitAppareilSubject();
+  }
+
+  deleteLoveIts() {
+    this.loveIts--;
+    this.emitAppareilSubject();
+  }
+
+  createNewPost() {
+
+  }
+
+  removePost() {
+    
   }
 
   constructor() { }

@@ -23,6 +23,14 @@ export class PostListComponentComponent implements OnInit, OnDestroy {
     this.postsService.emitAppareilSubject();
   }
 
+  onAddLoveIts() {
+    this.postsService.addLoveIts();
+  }
+
+  onDeleteLoveIts() {
+    this.postsService.deleteLoveIts();
+  }
+
   ngOnDestroy() {
     this.postsSubscription.unsubscribe();
   }

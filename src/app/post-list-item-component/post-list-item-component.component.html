@@ -1,10 +1,7 @@
-<!-- <p>Updated on : {{ lastUpdate | async | date: 'short' }}</p> -->
-
 <li [ngClass]="{'list-group-item': true,
 'list-group-item-success': loveIts > 0,
 'list-group-item-danger': loveIts < 0}">
-  <!--<h4 [ngStyle]="{color: getColor()}">Appareil : {{ appareilName }} - Status : {{ getStatus() }}</h4> 
-  <input type="text" class="form-control" [(ngModel)]="appareilName"> -->
+
   <div class="row">
     <div class="col-md-6">
       <h4 style="text-align: left">{{postTitle}}</h4>
@@ -17,11 +14,11 @@
   <p>{{postContent}}</p>
   <div class="row">
     <div class="col-md-6 ">
-      <button class="btn btn-success" (click)="addLoveIts()">Love it!</button>
-      <button class="btn btn-danger" (click)="deleteLoveIts()">Don't love it</button>
+      <button class="btn btn-success" (click)="onAddLoveIts()">Love it!</button>
+      <button class="btn btn-danger" (click)="onDeleteLoveIts()">Don't love it</button>
     </div>
     <div class="col-md-6">
-      <button class="btn btn-warning" (click)="deletePost()">Delete Post</button>
+      <button class="btn btn-warning" (click)="onDeletePost()">Delete Post</button>
     </div>
   </div>
 </li>
