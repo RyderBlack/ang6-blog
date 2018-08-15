@@ -75,7 +75,7 @@ export class PostServiceService {
   removePost(event) {
     const indexToRemove = this.posts.findIndex(
       (post) => {
-        if(post.title == event.target.id) {
+        if(post.id == event.target.id) {
           return true;
         }
       }

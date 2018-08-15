@@ -14,6 +14,7 @@ export class PostListItemComponentComponent implements OnInit {
   @Input() postDate: Date;
   @Input() loveIts: number;
   @Input() index: number;
+  @Input() id: number;
   
 
   constructor(private postsService : PostServiceService) { }
