@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class PostServiceService {
+
+
+  postsSubject = new Subject<any[]>();
 
   private posts = [
     {
@@ -32,6 +36,10 @@ export class PostServiceService {
       created_at: new Date
     }
   ];
+
+  emitAppareilSubject() {
+    this.postsSubject.next(this.posts.slice());
+  }
 
   constructor() { }
 }
