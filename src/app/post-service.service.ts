@@ -39,6 +39,7 @@ export class PostServiceService {
   ];
 
   emitAppareilSubject() {
+    
     this.postsSubject.next(this.posts.slice());
   }
 
@@ -57,7 +58,7 @@ export class PostServiceService {
   }
 
   removePost() {
-    
+
   }
 
   constructor() { }
