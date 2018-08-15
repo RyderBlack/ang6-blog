@@ -9,7 +9,7 @@ import { Subscription } from 'rxjs';
 })
 export class PostListComponentComponent implements OnInit, OnDestroy {
 
-  @Input() posts : any[];
+  posts : any[];
   postsSubscription: Subscription;
   
   constructor(private postsService : PostServiceService) { }
@@ -20,15 +20,7 @@ export class PostListComponentComponent implements OnInit, OnDestroy {
         this.posts = posts;
       }
     );
-    this.postsService.emitAppareilSubject();
-  }
-
-  onAddLoveIts() {
-    this.postsService.addLoveIts();
-  }
-
-  onDeleteLoveIts() {
-    this.postsService.deleteLoveIts();
+    this.postsService.emitPostSubject();
   }
 
   ngOnDestroy() {

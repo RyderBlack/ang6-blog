@@ -4,13 +4,23 @@
     Welcome to {{ title }}!
   </h1>
 
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-collapse">
+          <ul class="nav navbar-nav">
+              <li routerLinkActive="active"><a routerLink="posts">Posts</a></li>
+              <li routerLinkActive="active"><a routerLink="new">New Post</a></li>
+          </ul>
+      </div>
+    </div>
+  </nav>
+
 
 <div class="container">
   <div class="row">
 <div class="col-md-10" style="margin: 0 auto">
-  <h3>My Posts</h3>
- <hr/>
-  <app-post-list-component [posts]="posts"></app-post-list-component>
+  
+  <router-outlet></router-outlet>
  
 </div>
   </div>
@@ -21,4 +31,5 @@
   <p>This blog is brought to you by our beloved veggies ipsum</p>
   <p>Copyright 2018 - <a href="https://ryhad.com">Ryhad, Inc</a></p>
 </footer>
+
 </div>

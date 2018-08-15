@@ -1,11 +1,16 @@
+<h3>My Posts</h3>
+<hr/>
 <ul class="list-group">
   <!--  <app-appareil1  *ngFor="let appareil of appareils"
    [appareilName]="appareil.name"
    [appareilStatus]="appareil.status"></app-appareil1> -->
-   <app-post-list-item-component *ngFor="let post of posts" 
+   <app-post-list-item-component *ngFor="let post of posts; let i = index" 
    [postTitle]="post.title"
    [postContent]="post.content"
    [postDate]="post.created_at"
-   [loveIts]="post.loveIts">
+   [loveIts]="post.loveIts"
+   [index]="i"
+   [id]="post.id"
+   >
   </app-post-list-item-component>
  </ul>
