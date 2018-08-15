@@ -1,6 +1,6 @@
 <li [ngClass]="{'list-group-item': true,
 'list-group-item-success': loveIts > 0,
-'list-group-item-danger': loveIts < 0}">
+'list-group-item-danger': loveIts < 0}" >
 
   <div class="row">
     <div class="col-md-6">
@@ -17,8 +17,8 @@
       <button class="btn btn-success" (click)="onAddLoveIts()">Love it!</button>
       <button class="btn btn-danger" (click)="onDeleteLoveIts()">Don't love it</button>
     </div>
-    <div class="col-md-6">
-      <button class="btn btn-warning" (click)="onDeletePost()">Delete Post</button>
+    <div class="col-md-6" >
+      <button class="btn btn-warning" [id]="postTitle" (click)="onDeletePost($event)">Delete Post</button>
     </div>
   </div>
 </li>

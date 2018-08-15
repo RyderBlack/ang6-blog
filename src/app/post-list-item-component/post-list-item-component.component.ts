@@ -1,6 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { PostServiceService } from '../post-service.service';
-import { Subscription } from 'rxjs';
+import { Post } from '../models/post.model';
 
 @Component({
   selector: 'app-post-list-item-component',
@@ -15,8 +15,6 @@ export class PostListItemComponentComponent implements OnInit {
   @Input() loveIts: number;
   @Input() index: number;
   
-  posts: any[];
-  postsSubscription: Subscription;
 
   constructor(private postsService : PostServiceService) { }
 
@@ -32,5 +30,7 @@ export class PostListItemComponentComponent implements OnInit {
     this.postsService.deleteLoveIts(this.index);
   }
 
-  onDeletePost() {}
+  onDeletePost(event) {
+    this.postsService.removePost(event);
+  }
 }
